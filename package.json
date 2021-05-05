@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Snehomoy100/Weather-Mate/issues"
   },
-  "homepage": "https://github.com/Snehomoy100/Weather-Mate#readme"
+  "homepage": "https://github.com/Snehomoy100/Weather-Mate#readme",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
 }
