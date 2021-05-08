@@ -1,9 +1,9 @@
 const request = require('request');
 
-const url = 'http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=89d69971c452b58e9d8c5fa2b6a5b28b'
+const url = 'http://api.openweathermap.org/data/2.5/weather?q=London&appid=89d69971c452b58e9d8c5fa2b6a5b28b'
 
 request({ url: url, json: true }, (error, response) => {
-    console.log(response.body.list);
-    
+    console.log(response.body.main.temp);
+
 });
 
