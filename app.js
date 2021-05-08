@@ -4,6 +4,6 @@ const url = 'http://api.openweathermap.org/data/2.5/weather?q=London&appid=89d69
 
 request({ url: url, json: true }, (error, response) => {
     // console.log(response.body.main.temp);
-    console.log(`It's currently ${response.body.main.temp} degrees out. There is a ${response.body.clouds.all}% chance of rain.`);
+    console.log(`It's currently ${response.body.main.temp} degrees out. There is a ${response.body.clouds.all}% chance of rain out there.`);
 });
 
