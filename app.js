@@ -4,7 +4,6 @@ const url = 'http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=89d
 
 request({ url: url, json: true }, (error, response) => {
     console.log(response.body.list);
-    // const temperature = response.body[list][main][temp];
-    // console.log("It is currently " + temperature);
+    
 });
 
