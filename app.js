@@ -13,7 +13,7 @@ request({ url: url, json: true }, (error, response) => {
 
 
 
-// Geocoding -> Location -> lat/long co-ordinate pair.
+// Geocoding -> Location -> lat/long co-ordinate pair -> weather.
 
 const geocodeUrl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=pk.eyJ1Ijoic25laG9tb3kxMDAiLCJhIjoiY2tvNjBnaGY5MWhtZzJxbHl0NWdwOGF0dyJ9.Ps-ZNqoVkpQWZ_apcBgCyA&limit=1';
  
