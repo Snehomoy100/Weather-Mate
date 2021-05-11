@@ -13,13 +13,15 @@ request({ url: url, json: true }, (error, response) => {
 
 
 
-const geocodeUrl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=pk.eyJ1Ijoic25laG9tb3kxMDAiLCJhIjoiY2tvNjBnaGY5MWhtZzJxbHl0NWdwOGF0dyJ9.Ps-ZNqoVkpQWZ_apcBgCyA&limit=1';
+// Geocoding -> Location -> lat/long co-ordinate pair.
 
-// first element of center array is longtitude & second one is lattitude
+const geocodeUrl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=pk.eyJ1Ijoic25laG9tb3kxMDAiLCJhIjoiY2tvNjBnaGY5MWhtZzJxbHl0NWdwOGF0dyJ9.Ps-ZNqoVkpQWZ_apcBgCyA&limit=1';
+ 
+// first element of center array is longtitude & second one is lattitude.
 
 
 request({ url: geocodeUrl, json: true }, (error, response) => {
-    
+
     const lattitude = response.body.features[0].center[1];
     const longtitude = response.body.features[0].center[0];
     console.log(lattitude);
