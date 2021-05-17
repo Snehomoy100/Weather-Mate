@@ -27,11 +27,11 @@ const geocodeUrl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Ange
 
 request({ url: geocodeUrl, json: true }, (error, response) => {
 
-    const lattitude = response.body.features[0].center[1];
-    const longtitude = response.body.features[0].center[0];
     if (error) {
         console.log("Unable to Connect...");
     } else {
+        const lattitude = response.body.features[0].center[1];
+        const longtitude = response.body.features[0].center[0];
         console.log(lattitude, longtitude);
     }
 })
