@@ -31,8 +31,6 @@ request({ url: geocodeUrl, json: true }, (error, response) => {
     const longtitude = response.body.features[0].center[0];
     if (error) {
         console.log("Unable to Connect...");
-    } else if(response.body.error){
-        console.log("Something is going wrong at your end...");
     } else {
         console.log(lattitude, longtitude);
     }
