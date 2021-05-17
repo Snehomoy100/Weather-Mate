@@ -20,7 +20,7 @@ const request = require('request');
 
 // Geocoding -> Location -> lat/long co-ordinate pair -> weather.
 
-const geocodeUrl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=pk.eyJ1Ijoic25laG9tb3kxMDAiLCJhIjoiY2tvNjBnaGY5MWhtZzJxbHl0NWdwOGF0dyJ9.Ps-ZNqoVkpQWZ_apcBgCyA&limit=1';
+const geocodeUrl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/beqavbhcv.json?access_token=pk.eyJ1Ijoic25laG9tb3kxMDAiLCJhIjoiY2tvNjBnaGY5MWhtZzJxbHl0NWdwOGF0dyJ9.Ps-ZNqoVkpQWZ_apcBgCyA&limit=1';
  
 // first element of center array is longtitude & second one is lattitude.
 
@@ -29,7 +29,10 @@ request({ url: geocodeUrl, json: true }, (error, response) => {
 
     if (error) {
         console.log("Unable to Connect...");
-    } else {
+    } else if (response.body.features.length === 0) {
+        console.log("You've put a wrong location.");
+    }
+    else {
         const lattitude = response.body.features[0].center[1];
         const longtitude = response.body.features[0].center[0];
         console.log(lattitude, longtitude);
