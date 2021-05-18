@@ -11,19 +11,19 @@
 // });
 
 
-const geoCoding = (address, callback) => {
-    setTimeout(() => {
-        const data = {
-            lattitude: 0,
-            longitude: 0
-        };
+// const geoCoding = (address, callback) => {
+//     setTimeout(() => {
+//         const data = {
+//             lattitude: 0,
+//             longitude: 0
+//         };
     
-        callback(data);
-    }, 2000);
-}
+//         callback(data);
+//     }, 2000);
+// }
 
 
-const data = geoCoding('Mumbai', (data) => {
-    console.log(data);
-});
+// const data = geoCoding('Mumbai', (data) => {
+//     console.log(data);
+// });
 
