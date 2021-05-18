@@ -4,3 +4,8 @@ setTimeout(() => {
 
 
 
+const names = ['Snehomoy', 'Rupomoy', 'Soumya'];
+
+const eachName = names.filter((name) => {
+    console.log(name.length <= 4);
+});
