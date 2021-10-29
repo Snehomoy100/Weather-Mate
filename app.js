@@ -1,13 +1,9 @@
-// basic asynchronous & non-blocking feature of nodejs
+// handling http requests in nodejs
 
-console.log("Starting");
+const request = require('request');
 
-setTimeout(() => {
-    console.log("2 seconds timer");
-}, 2000);
+const url = 'https://api.openweathermap.org/data/2.5/forecast?id=524901&appid=44350a15f38473661ce8cc0150e8b306';
 
-setTimeout(() => {
-    console.log("0 seconds timer");
-}, 0);
-
-console.log("Stopping");
+request({url: url}, (error, response) => {
+    console.log(response);
+})
