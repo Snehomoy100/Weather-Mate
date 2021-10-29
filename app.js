@@ -6,5 +6,5 @@ const url = 'https://api.openweathermap.org/data/2.5/forecast?id=524901&appid=44
 
 request({url: url}, (error, response) => {
     const data = JSON.parse(response.body);
-    console.log(data.cod);
+    console.log(data.cod); // the status code 
 })
